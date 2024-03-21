@@ -5,18 +5,14 @@
         <div class="row p-3 justify-content-center">
 
             @foreach ($products as $item)
-                <div class="col-3 my-3">
-                    <img src="{{ $item->image }}" class="card-img-top rounded-top-4" alt="{{ $item->name }}">
-                    <div class="card-body rounded-bottom-4 p-3 border">
-                        <h5 class="card-title">{{ $item->name }}</h5>
-                        <p class="card-text">$ {{ $item->price }}</p>
-                        <div>
-                            <p class="badge rounded-pill"
-                                style="color: {{ $item->category->color }}; border: 1px solid {{ $item->category->color }}">
-                                {{ $item->category->label }}</p>
-                        </div>
-                        <a href="{{ route('products.show', $item->id) }}" class="btn btn-primary mb-2">Show
-                            details</a>
+                <div id="card-visible" class="col-3 rounded-4 text-center my-3 py-4">
+                    <h2 class="p-3" style="color: {{ $item->category->color }}">
+                        {{ $item->category->label }}
+                    </h2>
+                    <div class="card-body p-3">
+                        <h1 class="card-text my-4">$ {{ $item->price }}</h1>
+                        <h5 class="card-title my-4">{{ $item->name }}</h5>
+                        <a href="{{ route('products.show', $item->id) }}" class="btn btn-primary mb-2">Get Started</a>
                     </div>
                 </div>
             @endforeach

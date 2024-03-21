@@ -2,3 +2,9 @@
 @use "./partials/mixins" as *;
 
 @import "~bootstrap/scss/bootstrap";
+
+#card-visible:hover {
+    box-shadow: rgba(255, 255, 255, 0.849) 0px 5px 25px;
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
+}

@@ -14,7 +14,7 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
 
-<body>
+<body class="bg-dark text-white">
     <!-- header -->
     @include('partials.header')
     <!-- main -->
