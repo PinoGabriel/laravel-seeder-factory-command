@@ -15,12 +15,12 @@ class ProductSeeder extends Seeder
   public function run()
   {
     // Utilizzo della factory per creare 95 prodotti non in evidenza
-    Product::factory(95)->create([
+    Product::factory(92)->create([
       'featured' => 0,
     ]);
 
     // Utilizzo della factory per creare 5 prodotti in evidenza
-    Product::factory(5)->create([
+    Product::factory(8)->create([
       'featured' => 1,
     ]);
   }
